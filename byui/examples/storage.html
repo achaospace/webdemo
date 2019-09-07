@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>byui</title>
+  <link rel="stylesheet" href="../dist/css/byui.css" />
+  <style>
+    .title-center {
+      margin-left: 50%;
+      font-size: 34px !important;
+    }
+
+    .site-h1 {
+      margin-bottom: 20px;
+      line-height: 60px;
+      padding-bottom: 10px;
+      color: #393d49;
+      border-bottom: 1px solid #eee;
+      font-size: 28px;
+      font-weight: 300;
+    }
+
+    .byui-elem-quote {
+      line-height: 22px;
+      border-radius: 0 2px 2px 0;
+      background-color: #f2f2f2;
+      padding: 8px 16px;
+      background-color: #ecf8ff;
+      border-radius: 4px;
+      border-left: 5px solid #50bfff;
+      margin: 20px 0;
+    }
+
+    .byui-field-title {
+      border-width: 1px 0 0;
+      border-color: #e6e6e6;
+    }
+
+    body li,
+    body p {
+      font-size: 16px;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .byui-layout-admin .byui-header {
+      border-bottom: 1px solid #dcdfe6;
+      background: white;
+    }
+
+    .byui-nav-tree .byui-nav-item a:hover {
+      color: #409eff
+    }
+
+    .byui-this,
+    .byui-this>a {
+      background: white !important;
+      color: #409eff !important;
+    }
+
+    .byui-nav-itemed>a {
+      color: #393d49 !important;
+      font-weight: bold;
+    }
+
+    .byui-nav-tree .byui-nav-item a:hover {
+      background-color: white;
+      color: #409eff;
+    }
+
+    .byui-nav {
+      background-color: #ffffff;
+    }
+
+    .byui-nav-tree .byui-nav-child a {
+      color: black;
+    }
+
+    .byui-nav-item .byui-nav-itemed>.byui-nav-child {
+      display: block;
+      padding: 0;
+      background-color: white;
+    }
+
+    .byui-nav-itemed>.byui-nav-child {
+      display: block;
+      padding: 0;
+      background-color: white !important;
+    }
+
+    .byui-nav-tree .byui-nav-bar {
+      background-color: #409eff;
+    }
+
+    .byui-layout-admin .byui-logo {
+      color: #409eff;
+    }
+    .byui-nav .byui-nav-item a{
+      color: black;
+    }
+  </style>
+</head>
+
+<body class="byui-layout-body">
+  <div class="byui-layout byui-layout-admin">
+    <div class="byui-header">
+      <div class="byui-logo title-center">byui</div>
+      <div class="byui-nav byui-layout-right">
+
+      </div>
+    </div>
+
+    <div class="layui-code layui-box">
+      <div class="layui-code layui-box-scroll">
+        <!-- 左侧导航区域（可配合byui已有的垂直导航） -->
+        <dd class="byui-nav byui-nav-tree" by-filter="test">
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">基础说明</a>
+            <dl class="byui-nav-child">
+              <dd><a href="start.html">开始使用</a></dd>
+              <dd><a href="element.html">页面元素</a></dd>
+              <dd><a href="infrastructure.html">底层方法</a></dd>
+              <dd><a href="modules.html">模块规范</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">布局</a>
+            <dl class="byui-nav-child">
+              <dd><a href="layout.html">栅格</a></dd>
+              <dd><a href="color.html">颜色</a></dd>
+              <dd><a href="icon.html">图标</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href="javascript:;">基本元素</a>
+            <dl class="byui-nav-child">
+              <dd><a href="button.html">按钮</a></dd>
+              <dd><a href="tab.html">选项卡</a></dd>
+              <dd><a href="progress.html">进度条</a></dd>
+              <dd><a href="badge.html">徽章</a></dd>
+              <dd><a href="anim.html">动画</a></dd>
+              <dd><a href="auxiliar.html">辅助元素</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href="javascript:;">内置模块</a>
+            <dl class="byui-nav-child">
+              <dd><a href="byscroll.html">滚动</a></dd>
+              <dd class="byui-this"><a href="storage.html">存储</a></dd>
+            </dl>
+          </li>
+        </dd>
+      </div>
+    </div>
+    <div class="byui-body">
+      <!-- 内容主体区域 -->
+      <div style="padding: 15px;">
+        <h1 class="site-h1">本地存储 - cookice 和 localstorage</h1>
+        <blockquote class="byui-elem-quote">
+          基于jquery的cookice，依赖于cookie模块.原生localstorage使用
+        </blockquote>
+        <pre class="layui-code layui-box byui-elem-quote"><h3 class="byui-code-h3">快速开始<br/><li>byui.use('cookie', function(){
+              var cookie = byui.cookie
+              console.log(cookie)
+            });</li></ol></pre>
+        <pre class="layui-code layui-box byui-elem-quote"><p>常用api cookie</p><p>
+  新增cookie：  
+  $.cookie('cookieName', 'cookieValue');    
+  注：如果没有设置cookie的有效期，则cookie默认在浏览器关闭前都有效，故被称为"会话cookie"。</br>
+  // 创建一个cookie并设置有效时间为7天:
+  $.cookie('cookieName', 'cookieValue', { expires: 7 });    </br> 
+  // 创建一个cookie并设置cookie的有效路径：
+  $.cookie('cookieName', 'cookieValue', { expires: 7, path: '/' });  </br>
+  读取cookie：  
+  $.cookie('cookieName'); // 若cookie存在则返回'cookieValue'；若cookie不存在则返回null    </br>  
+  删除cookie：把ncookie的值设为null即可  
+  $.cookie('the_cookie', null); </p>
+<p>localStorage</p><p>
+  新增localStorage：localStorage.setItem("key", "value");
+  读取localStorage：var lastname = localStorage.getItem("key");
+  删除localStorage：localStorage.removeItem("key");
+</p>
+  </pre>
+      </div>
+    </div>
+  </div>
+  <script src="../dist/byui.js"></script>
+  <script>
+    //JavaScript代码区域
+    byui.use("element", function () {
+      var element = byui.element;
+    });
+  </script>
+</body>
+
+</html>

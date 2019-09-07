@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>byui</title>
+  <link rel="stylesheet" href="../dist/css/byui.css" />
+  <style>
+    .title-center {
+      margin-left: 50%;
+      font-size: 34px !important;
+    }
+
+    .site-h1 {
+      margin-bottom: 20px;
+      line-height: 60px;
+      padding-bottom: 10px;
+      color: #393d49;
+      border-bottom: 1px solid #eee;
+      font-size: 28px;
+      font-weight: 300;
+    }
+
+    .byui-elem-quote {
+      line-height: 22px;
+      border-radius: 0 2px 2px 0;
+      background-color: #f2f2f2;
+      padding: 8px 16px;
+      background-color: #ecf8ff;
+      border-radius: 4px;
+      border-left: 5px solid #50bfff;
+      margin: 20px 0;
+    }
+    
+
+    .byui-field-title {
+      border-width: 1px 0 0;
+      border-color: #e6e6e6;
+    }
+
+    .byui-layout-admin .byui-header {
+      border-bottom: 1px solid #dcdfe6;
+      background: white;
+    }
+
+    .byui-nav-tree .byui-nav-item a:hover {
+      color: #409eff
+    }
+
+    .byui-this,
+    .byui-this>a {
+      background: white !important;
+      color: #409eff !important;
+    }
+
+    .byui-nav-itemed>a {
+      color: #393d49 !important;
+      font-weight: bold;
+    }
+
+    .byui-nav-tree .byui-nav-item a:hover {
+      background-color: white;
+      color: #409eff;
+    }
+
+    .byui-nav {
+      background-color: #ffffff;
+    }
+
+    .byui-nav-tree .byui-nav-child a {
+      color: black;
+    }
+
+    .byui-nav-item .byui-nav-itemed>.byui-nav-child {
+      display: block;
+      padding: 0;
+      background-color: white;
+    }
+
+    .byui-nav-itemed>.byui-nav-child {
+      display: block;
+      padding: 0;
+      background-color: white !important;
+    }
+
+    .byui-nav-tree .byui-nav-bar {
+      background-color: #409eff;
+    }
+
+    .byui-layout-admin .byui-logo {
+      color: #409eff;
+    }
+    .byui-nav .byui-nav-item a{
+      color: black;
+    }
+  </style>
+</head>
+
+<body class="byui-layout-body">
+  <div class="byui-layout byui-layout-admin">
+    <div class="byui-header">
+      <div class="byui-logo title-center">byui</div>
+      <div class="byui-nav byui-layout-right">
+
+      </div>
+    </div>
+
+    <div class="layui-code layui-box">
+      <div class="layui-code layui-box-scroll">
+        <!-- 左侧导航区域（可配合byui已有的垂直导航） -->
+        <dd class="byui-nav byui-nav-tree" by-filter="test">
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">基础说明</a>
+            <dl class="byui-nav-child">
+              <dd class="byui-this"><a href="start.html">开始使用</a></dd>
+              <dd><a href="element.html">页面元素</a></dd>
+              <dd><a href="infrastructure.html">底层方法</a></dd>
+              <dd><a href="modules.html">模块规范</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">布局</a>
+            <dl class="byui-nav-child">
+              <dd><a href="layout.html">栅格</a></dd>
+              <dd><a href="color.html">颜色</a></dd>
+              <dd><a href="icon.html">图标</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href="javascript:;">基本元素</a>
+            <dl class="byui-nav-child">
+              <dd><a href="button.html">按钮</a></dd>
+              <dd><a href="tab.html">选项卡</a></dd>
+              <dd><a href="progress.html">进度条</a></dd>
+              <dd><a href="badge.html">徽章</a></dd>
+              <dd><a href="anim.html">动画</a></dd>
+              <dd><a href="auxiliar.html">辅助元素</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href="javascript:;">内置模块</a>
+            <dl class="byui-nav-child">
+              <dd><a href="byscroll.html">滚动</a></dd>
+              <dd><a href="storage.html">存储</a></dd>
+            </dl>
+          </li>
+        </dd>
+      </div>
+    </div>
+    <div class="byui-body">
+      <!-- 内容主体区域 -->
+      <div style="padding: 15px;">
+        <h1 class="site-h1">开始使用 - 入门指南</h1>
+        <blockquote class="byui-elem-quote">
+          byui基于gulp构建的前端框架，是js模块化开发解决方案。目前我们PC端、手机端项目前端都是基于jquery项目构建，项目中前端引用框架、插件过多，并且并不是全部框架功能都有使用，严重影响前端页面加载速度，鉴于以上原因，把常用的功能基于layui重新重构了一下，打算用一个框架。保留了layui样式，删除了暂时用不到的代码，取其精华。希望对以后项目有所帮助。
+        </blockquote>
+        <fieldset class="byui-elem-field byui-field-title site-title">
+          <legend><a name="compatibility">兼容性和面向场景</a></legend>
+        </fieldset>
+        <blockquote class="byui-elem-quote" style="text-align: left;">
+          byui 不兼容IE6/7。
+        </blockquote>
+        <legend><a name="quickstart">快速上手</a></legend>
+        </fieldset>
+        <pre
+          class="layui-code layui-box byui-elem-quote"><h3 class="byui-code-h3">模块化引用<br/></h3><ol class="byui-code-ol"><li>./byui/css/byui.css</li><li>./byui/byui.js </li></ol></pre>
+        <pre
+          class="layui-code layui-box byui-elem-quote"><h3 class="byui-code-h3"></h3><ol class="byui-code-ol"><li><li>&lt;script src="../byui/byui.js"&gt;&lt;/script&gt;</li><li>&lt;script&gt;</li><li>//一般直接写在一个js文件中</li><li>byui.use(['jquery','byscroll'], function(){</li><li>  var $= byui.$</li><li>  ,byscroll = byui.byscroll;</li><li>console.log($) </li><li></li><li>});</li><li>&lt;/script&gt; </li></ol></pre>
+        <div class="site-text">
+          <p>我们推荐你遵循 byui 的模块规范建立一个入口文件，并通过 byui.use() 方式来加载该入口文件，如下所示：</p>
+          <pre
+            class="layui-code layui-box byui-elem-quote"><h3 class="byui-code-h3"></h3><ol class="byui-code-ol"><li>&lt;script&gt;</li><li>byui.config({</li><li>  base: '/res/js/modules/' //你存放新模块的目录，注意，不是byui的模块目录</li><li>}).use('index'); //加载入口</li><li>&lt;/script&gt;    </li><li>    </li></ol></pre>
+          上述的 index 即为你 /res/js/modules/ 目录下的 index.js，它的内容应该如下：
+          <pre
+            class="layui-code layui-box byui-elem-quote"><h3 class="byui-code-h3"></h3><ol class="byui-code-ol"><li>/**</li><li>  项目JS主入口</li><li>  以依赖byui的jquery和byscroll模块为例</li><li>**/    </li><li>byui.define(['jquery', 'byscroll'], function(exports){</li><li>  var jquery= byui.$</li><li>  ,byscroll = byui.byscroll;</li><li>  </li><li>  console.log($)</li><li>  </li><li>  exports('index', {}); //注意，这里是模块输出的核心，模块名必须和use时的模块名一致</li><li>});    </li><li>      </li></ol></pre>
+        </div>
+        <pre
+          class="layui-code layui-box byui-elem-quote"><h3 class="byui-code-h3"></h3><ol class="byui-code-ol"><li>/**</li><li>  项目JS主入口</li><li>  以依赖byui的jquery和byscroll模块为例</li><li>**/    </li><li>byui.define(['jquery', 'byscroll'], function(exports){</li><li>  var jquery= byui.$</li><li>  ,byscroll = byui.byscroll;</li><li>  </li><li> console.log($)</li><li>  </li><li>  exports('index', {}); //注意，这里是模块输出的核心，模块名必须和use时的模块名一致</li><li>});    </li><li>      </li></ol></pre>
+      </div>
+    </div>
+  </div>
+  <script src="../dist/byui.js"></script>
+  <script>
+    //JavaScript代码区域
+    byui.use("element", function () {
+      var element = byui.element;
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>byui</title>
+  <link rel="stylesheet" href="../dist/css/byui.css" />
+  <style>
+    .title-center {
+      margin-left: 50%;
+      font-size: 34px !important;
+    }
+
+    .site-h1 {
+      margin-bottom: 20px;
+      line-height: 60px;
+      padding-bottom: 10px;
+      color: #393d49;
+      border-bottom: 1px solid #eee;
+      font-size: 28px;
+      font-weight: 300;
+    }
+
+    .byui-elem-quote {
+      line-height: 22px;
+      border-radius: 0 2px 2px 0;
+      background-color: #f2f2f2;
+      padding: 8px 16px;
+      background-color: #ecf8ff;
+      border-radius: 4px;
+      border-left: 5px solid #50bfff;
+      margin: 20px 0;
+    }
+
+    .byui-field-title {
+      border-width: 1px 0 0;
+      border-color: #e6e6e6;
+    }
+
+    .site-doc-icon {
+      margin-bottom: 50px;
+      font-size: 0;
+    }
+
+    .site-doc-icon li .byui-anim {
+      width: 150px;
+      height: 150px;
+      line-height: 150px;
+      margin: 0 auto 10px;
+      text-align: center;
+      background-color: #009688;
+      cursor: pointer;
+      color: #fff;
+      border-radius: 50%;
+    }
+
+    .site-title fieldset {
+      border: none;
+      padding: 0;
+      border-top: 1px solid #eee;
+    }
+
+    .site-title {
+      margin: 30px 0 20px;
+    }
+
+    .site-title fieldset legend {
+      margin-left: 20px;
+      padding: 0 10px;
+      font-size: 22px;
+      font-weight: 300;
+    }
+
+    .site-table {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    .site-table thead {
+      background-color: #f2f2f2;
+    }
+
+    .site-table th,
+    .site-table td {
+      padding: 6px 15px;
+      min-height: 20px;
+      line-height: 20px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .site-text p {
+      margin-bottom: 10px;
+      line-height: 22px;
+    }
+
+    .site-text em {
+      padding: 0 3px;
+      font-weight: 500;
+      font-style: italic;
+      color: #666;
+    }
+    .byui-layout-admin .byui-header {
+      border-bottom: 1px solid #dcdfe6;
+      background: white;
+    }
+
+    .byui-nav-tree .byui-nav-item a:hover {
+      color: #409eff
+    }
+
+    .byui-this,
+    .byui-this>a {
+      background: white !important;
+      color: #409eff !important;
+    }
+
+    .byui-nav-itemed>a {
+      color: #393d49 !important;
+      font-weight: bold;
+    }
+
+    .byui-nav-tree .byui-nav-item a:hover {
+      background-color: white;
+      color: #409eff;
+    }
+
+    .byui-nav {
+      background-color: #ffffff;
+    }
+
+    .byui-nav-tree .byui-nav-child a {
+      color: black;
+    }
+
+    .byui-nav-item .byui-nav-itemed>.byui-nav-child {
+      display: block;
+      padding: 0;
+      background-color: white;
+    }
+
+    .byui-nav-itemed>.byui-nav-child {
+      display: block;
+      padding: 0;
+      background-color: white !important;
+    }
+
+    .byui-nav-tree .byui-nav-bar {
+      background-color: #409eff;
+    }
+
+    .byui-layout-admin .byui-logo {
+      color: #409eff;
+    }
+    .byui-nav .byui-nav-item a{
+      color: black;
+    }
+  </style>
+</head>
+
+<body class="byui-layout-body">
+  <div class="byui-layout byui-layout-admin">
+    <div class="byui-header">
+      <div class="byui-logo title-center">byui</div>
+      <div class="byui-nav byui-layout-right">
+       
+      </div>
+    </div>
+
+    <div class="layui-code layui-box">
+      <div class="layui-code layui-box-scroll">
+        <!-- 左侧导航区域（可配合byui已有的垂直导航） -->
+        <dd class="byui-nav byui-nav-tree" by-filter="test">
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">基础说明</a>
+            <dl class="byui-nav-child">
+              <dd><a href="start.html">开始使用</a></dd>
+              <dd><a href="element.html">页面元素</a></dd>
+              <dd><a href="infrastructure.html">底层方法</a></dd>
+              <dd><a href="modules.html">模块规范</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">布局</a>
+            <dl class="byui-nav-child">
+              <dd><a href="layout.html">栅格</a></dd>
+              <dd><a href="color.html">颜色</a></dd>
+              <dd><a href="icon.html">图标</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href=" javascript:;">基本元素</a>
+            <dl class="byui-nav-child">
+              <dd><a href="button.html">按钮</a></dd>
+              <dd  class="byui-this"><a href="tab.html">选项卡</a></dd>
+              <dd><a href="progress.html">进度条</a></dd>
+              <dd><a href="badge.html">徽章</a></dd>
+              <dd><a href="anim.html">动画</a></dd>
+              <dd><a href="auxiliar.html">辅助元素</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+              <a href="javascript:;">内置模块</a>
+              <dl class="byui-nav-child">
+                 <dd><a href="byscroll.html">滚动</a></dd>
+                <dd><a href="storage.html">存储</a></dd>
+              </dl>
+            </li>
+        </dd>
+      </div>
+    </div>
+    <div class="byui-body">
+      <!-- 内容主体区域 -->
+      <div style="padding: 15px;">
+          <div class="site-content">
+              <h1 class="site-h1">Tab选项卡 - 页面元素</h1>
+              <blockquote class="site-text byui-elem-quote">
+                Tab选项卡提供多套风格，支持响应式，支持删除选项卡等功能。面包屑结构简单，支持自定义分隔符。
+              </blockquote>
+              <blockquote class="site-text byui-elem-quote">
+                依赖加载组件：<a href="/doc/modules/element.html">element</a>
+                <span>（请注意：必须加载element模块，相关功能才能正常使用）</span></blockquote>
+              
+       
+              <div class="site-title">
+                <fieldset><legend><a name="default">默认Tab选项卡</a></legend></fieldset>
+              </div>    
+              <div class="site-text">
+                <div class="byui-tab" style="margin: 30px 0;">
+                  <ul class="byui-tab-title">
+                    <li class="byui-this">网站设置</li>
+                    <li>用户管理</li>
+                    <li>权限分配</li>
+                    <li>商品管理</li>
+                    <li>订单管理</li>
+                  </ul>
+                  <div class="byui-tab-content">
+                    <div class="byui-tab-item byui-show"> 
+                      <blockquote class="byui-elem-quote">如果需要对Tab进行外部新增、删除、切换等操作，请移步到“内置组件-常用元素操作”页面中查阅：基础方法</blockquote>
+                    </div>
+                    <div class="byui-tab-item">内容2</div>
+                    <div class="byui-tab-item">内容3</div>
+                    <div class="byui-tab-item">内容4</div>
+                    <div class="byui-tab-item">内容5</div>
+                  </div>
+                </div>
+                <pre class="layui-code layui-box byui-elem-quote" by-title="对应的HTML结构"><ol class="byui-code-ol"><li>&lt;div class="byui-tab"&gt;</li><li>  &lt;ul class="byui-tab-title"&gt;</li><li>    &lt;li class="byui-this"&gt;网站设置&lt;/li&gt;</li><li>    &lt;li&gt;用户管理&lt;/li&gt;</li><li>    &lt;li&gt;权限分配&lt;/li&gt;</li><li>    &lt;li&gt;商品管理&lt;/li&gt;</li><li>    &lt;li&gt;订单管理&lt;/li&gt;</li><li>  &lt;/ul&gt;</li><li>  &lt;div class="byui-tab-content"&gt;</li><li>    &lt;div class="byui-tab-item byui-show"&gt;内容1&lt;/div&gt;</li><li>    &lt;div class="byui-tab-item"&gt;内容2&lt;/div&gt;</li><li>    &lt;div class="byui-tab-item"&gt;内容3&lt;/div&gt;</li><li>    &lt;div class="byui-tab-item"&gt;内容4&lt;/div&gt;</li><li>    &lt;div class="byui-tab-item"&gt;内容5&lt;/div&gt;</li><li>  &lt;/div&gt;</li><li>&lt;/div&gt;</li><li> </li><li>&lt;script&gt;</li><li>//注意：选项卡 依赖 element 模块，否则无法进行功能性操作</li><li>byui.use('element', function(){</li><li>  var element = byui.element;</li><li>  </li><li>  //…</li><li>});</li><li>&lt;/script&gt;</li><li>      </li></ol></pre>
+              </div>
+              
+              <div class="site-title">
+                <fieldset><legend><a name="brief">Tab简洁风格</a></legend></fieldset>
+              </div>  
+              <div class="site-text">
+                <div class="byui-tab byui-tab-brief" by-filter="docDemoTabBrief" style="margin: 0 0 20px;">
+                  <ul class="byui-tab-title">
+                    <li class="byui-this">网站设置</li>
+                    <li>用户管理</li>
+                    <li>权限分配</li>
+                    <li>商品管理</li>
+                    <li>订单管理</li>
+                  </ul>
+                </div>
+                <pre class="layui-code layui-box byui-elem-quote" by-title="对应的HTML结构"><ol class="byui-code-ol"><li>&lt;div class="byui-tab byui-tab-brief" by-filter="docDemoTabBrief"&gt;</li><li>  &lt;ul class="byui-tab-title"&gt;</li><li>    &lt;li class="byui-this"&gt;网站设置&lt;/li&gt;</li><li>    &lt;li&gt;用户管理&lt;/li&gt;</li><li>    &lt;li&gt;权限分配&lt;/li&gt;</li><li>    &lt;li&gt;商品管理&lt;/li&gt;</li><li>    &lt;li&gt;订单管理&lt;/li&gt;</li><li>  &lt;/ul&gt;</li><li>  &lt;div class="byui-tab-content"&gt;&lt;/div&gt;</li><li>&lt;/div&gt;      </li><li>      </li></ol></pre>
+                <p>通过追加class：<em>byui-tab-brief</em> 来设定简洁风格。</p>
+              </div>
+              
+              <div class="site-title">
+                <fieldset><legend><a name="card">Tab卡片风格</a></legend></fieldset>
+              </div>  
+              <div class="site-text">
+                <div class="byui-tab byui-tab-card">
+                  <ul class="byui-tab-title">
+                    <li class="byui-this">网站设置</li>
+                    <li>用户管理</li>
+                    <li>权限分配</li>
+                    <li>商品管理</li>
+                    <li>订单管理</li>
+                  </ul>
+                  <div class="byui-tab-content" style="height: 100px;">
+                    <div class="byui-tab-item byui-show">1</div>
+                    <div class="byui-tab-item">2</div>
+                    <div class="byui-tab-item">3</div>
+                    <div class="byui-tab-item">4</div>
+                    <div class="byui-tab-item">5</div>
+                    <div class="byui-tab-item">6</div>
+                  </div>
+                </div>
+                <pre class="layui-code layui-box byui-elem-quote" by-title="对应的HTML结构"><ol class="byui-code-ol"><li>&lt;div class="byui-tab byui-tab-card"&gt;</li><li>  &lt;ul class="byui-tab-title"&gt;</li><li>    &lt;li class="byui-this"&gt;网站设置&lt;/li&gt;</li><li>    &lt;li&gt;用户管理&lt;/li&gt;</li><li>    &lt;li&gt;权限分配&lt;/li&gt;</li><li>    &lt;li&gt;商品管理&lt;/li&gt;</li><li>    &lt;li&gt;订单管理&lt;/li&gt;</li><li>  &lt;/ul&gt;</li><li>  &lt;div class="byui-tab-content" style="height: 100px;"&gt;</li><li>    &lt;div class="byui-tab-item byui-show"&gt;1&lt;/div&gt;</li><li>    &lt;div class="byui-tab-item"&gt;2&lt;/div&gt;</li><li>    &lt;div class="byui-tab-item"&gt;3&lt;/div&gt;</li><li>    &lt;div class="byui-tab-item"&gt;4&lt;/div&gt;</li><li>    &lt;div class="byui-tab-item"&gt;5&lt;/div&gt;</li><li>    &lt;div class="byui-tab-item"&gt;6&lt;/div&gt;</li><li>  &lt;/div&gt;</li><li>&lt;/div&gt;</li><li>      </li></ol></pre>
+                <p>通过追加class：<em>byui-tab-card</em>来设定卡片风格</p>
+              </div>
+              <div class="site-title">
+                <fieldset><legend><a name="del">带删除的Tab</a></legend></fieldset>
+              </div>  
+              <div class="site-text">
+                <p>你可以对父层容器设置属性 <em>by-allowClose="true"</em> 来允许Tab选项卡被删除</p>
+                <div class="byui-tab" by-allowclose="true" style="margin: 20px 0;">
+                    <div class="byui-tab" by-allowClose="true">
+                        <ul class="byui-tab-title">
+                          <li class="byui-this">网站设置</li>
+                          <li>用户基本管理</li>
+                          <li>权限分配</li>
+                          <li>全部历史商品管理文字长一点试试</li>
+                          <li>订单管理</li>
+                        </ul>
+                        <div class="byui-tab-content">
+                          <div class="byui-tab-item byui-show">1</div>
+                          <div class="byui-tab-item">2</div>
+                          <div class="byui-tab-item">3</div>
+                          <div class="byui-tab-item">4</div>
+                          <div class="byui-tab-item">5</div>
+                          <div class="byui-tab-item">6</div>
+                        </div>
+                      </div>
+                </div>
+                <pre class="layui-code layui-box byui-elem-quote" by-title="对应的HTML结构"><ol class="byui-code-ol"><li>&lt;div class="byui-tab" by-allowClose="true"&gt;</li><li>  &lt;ul class="byui-tab-title"&gt;</li><li>    &lt;li class="byui-this"&gt;网站设置&lt;/li&gt;</li><li>    &lt;li&gt;用户基本管理&lt;/li&gt;</li><li>    &lt;li&gt;权限分配&lt;/li&gt;</li><li>    &lt;li&gt;全部历史商品管理文字长一点试试&lt;/li&gt;</li><li>    &lt;li&gt;订单管理&lt;/li&gt;</li><li>  &lt;/ul&gt;</li><li>  &lt;div class="byui-tab-content"&gt;</li><li>    &lt;div class="byui-tab-item byui-show"&gt;1&lt;/div&gt;</li><li>    &lt;div class="byui-tab-item"&gt;2&lt;/div&gt;</li><li>    &lt;div class="byui-tab-item"&gt;3&lt;/div&gt;</li><li>    &lt;div class="byui-tab-item"&gt;4&lt;/div&gt;</li><li>    &lt;div class="byui-tab-item"&gt;5&lt;/div&gt;</li><li>    &lt;div class="byui-tab-item"&gt;6&lt;/div&gt;</li><li>  &lt;/div&gt;</li><li>&lt;/div&gt;</li><li>      </li></ol></pre>
+                <p>与默认相比没有什么特别的结构，就是多了个属性 <em>by-allowClose="true"</em></p>      
+              </div>
+              
+              <div class="site-title">
+                <fieldset><legend><a name="layid">ID焦点定位</a></legend></fieldset>
+              </div>  
+              <div class="site-text">
+                <p>你可以通过对选项卡设置属性 <em>by-id="xxx"</em> 来作为唯一的匹配索引，以用于外部的定位切换，如后台的左侧导航、以及页面地址 hash的匹配。</p>
+                <pre class="layui-code layui-box byui-elem-quote" by-title="对应的HTML结构"><ol class="byui-code-ol"><li>&lt;div class="byui-tab" by-filter="test1"&gt;</li><li>  &lt;ul class="byui-tab-title"&gt;</li><li>    &lt;li class="byui-this" <a>by-id="111"</a> &gt;文章列表&lt;/li&gt;</li><li>    &lt;li <a>by-id="222"</a>&gt;发送信息&lt;/li&gt;</li><li>    &lt;li <a>by-id="333"</a>&gt;权限分配&lt;/li&gt;</li><li>    &lt;li <a>by-id="444"</a>&gt;审核&lt;/li&gt;</li><li>    &lt;li <a>by-id="555"</a>&gt;订单管理&lt;/li&gt;</li><li>  &lt;/ul&gt;</li><li>  &lt;div class="byui-tab-content"&gt;</li><li>    &lt;div class="byui-tab-item byui-show"&gt;1&lt;/div&gt;</li><li>    &lt;div class="byui-tab-item"&gt;2&lt;/div&gt;</li><li>    &lt;div class="byui-tab-item"&gt;3&lt;/div&gt;</li><li>    &lt;div class="byui-tab-item"&gt;4&lt;/div&gt;</li><li>    &lt;div class="byui-tab-item"&gt;5&lt;/div&gt;</li><li>  &lt;/div&gt;</li><li>&lt;/div&gt;</li><li>      </li></ol></pre>
+                <p>属性 by-id 是扮演这项功能的主要角色，它是动态操作的重要凭据，如：</p>  
+                <pre class="layui-code layui-box byui-elem-quote"><ol class="byui-code-ol"><li>&lt;script&gt;</li><li>byui.use('element', function(){</li><li>  var element = byui.element;</li><li>  </li><li>  //获取hash来切换选项卡，假设当前地址的hash为by-id对应的值</li><li>  var layid = location.hash.replace(/^#test1=/, '');</li><li>  element.tabChange('test1', layid); //假设当前地址为：http://a.com#test1=222，那么选项卡会自动切换到“发送消息”这一项</li><li>  </li><li>  //监听Tab切换，以改变地址hash值</li><li>  element.on('tab(test1)', function(){</li><li>    location.hash = 'test1='+ this.getAttribute('by-id');</li><li>  });</li><li>});</li><li>&lt;/script&gt;      </li><li>      </li></ol></pre>
+                <p>同样的还有增加选项卡和删除选项卡，都需要用到 by-id</p>  
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+  <script src="../dist/byui.js"></script>
+  <script>
+        byui.use("element", function () {
+      var element = byui.element;
+    });
+  </script>
+</body>
+
+</html>
